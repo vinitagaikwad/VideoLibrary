@@ -1,0 +1,17 @@
+<!-- Page Content -->
+<div class="row">
+    <p class="logout-parent home">
+        <a [routerLink]="['/home']" class="btn-link font-green"><img src="assets/images/home.svg" alt="home"></a>
+    </p>
+    <p class="logout-parent logout">
+      <a [routerLink]="['/login']" class="btn-link font-green"><img src="assets/images/logout.svg" alt="logout"></a>
+    </p>
+    <div *ngFor="let item of myData?.items | paginate: { itemsPerPage: 5, currentPage: p }" 
+    class="col-lg-4 col-sm-6 m-b-40">
+      <app-video-item [item] = "item" [routerLink]="['../details',item.contentDetails.videoId, item.snippet.title, item.snippet.description]"></app-video-item>
+    </div>
+    <div class="full-width">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+  <!-- /.row -->

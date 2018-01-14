@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+      <p class="logout-parent home">
+          <a [routerLink]="['/home']" class="btn-link font-green"><img src="assets/images/home.svg" alt="home"></a>
+      </p>
+      <p class="logout-parent logout">
+        <a [routerLink]="['/login']" class="btn-link font-green"><img src="assets/images/logout.svg" alt="logout"></a>
+      </p>
+    <div class="col-lg-7">
+      <section class="panel panel-info">
+        <div class="panel-body">
+          <youtube-player 
+            [videoId]="id" 
+            (ready)="savePlayer($event)"
+            (change)="onStateChange($event)"
+          >
+          </youtube-player>
+        </div>
+      </section>
+    </div>
+    <div class="col-lg-5">
+     <h3>{{ title }}</h3>
+     <div class="description">
+      {{ description }}
+     </div>
+     <p class="m-t-10"><a [routerLink]="['/video-list']" class="btn-link font-green"> << Back To Library</a></p>
+    </div>
+    
+  </div>
+    
+  </div>

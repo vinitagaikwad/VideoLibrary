@@ -1,0 +1,14 @@
+﻿<div class="home-bg">
+    
+    <p class="logout-parent logout">
+        <a [routerLink]="['/login']" class="btn-link font-green"><img src="assets/images/logout.svg" alt="logout"></a>
+    </p>
+<div class="col-md-12 col-md-offset-3 text-center">
+    <div class="greeting">
+        <h1>Hello {{currentUser.firstName}}!</h1>
+        <h2>Welcome To The Music Library</h2>
+        <p>We have few videos listed for you! Please visit our video library.</p>
+        <p><a [routerLink]="['/video-list']" class="btn-link font-green">Go to our Music library >></a></p>
+    </div>
+</div>
+</div>

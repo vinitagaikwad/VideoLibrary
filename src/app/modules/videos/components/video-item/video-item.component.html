@@ -1,0 +1,14 @@
+<div class="card h-100" *ngIf="item.snippet.thumbnails">
+  <a class="relative">
+    <img src={{item.snippet.thumbnails.high.url}} alt="thumbnail" class="pointer" id="imgId">
+    <div class="image-overlay">
+      <p class="card-text displayInlineBlock">{{item.snippet.title}}</p>
+      <span class="pointer displayInlineBlock right"><img src="assets/images/play_button.svg" alt="play"/></span>
+    </div>
+  </a>
+<div class="card-body">
+    <p class="fa-light font-gray-2">Published On: {{item.snippet.publishedAt | date: 'mediumDate' }}</p>
+    <div class="font-xs font-gray-1 font-light">{{item.snippet.description}}</div>
+    
+</div>
+</div>
